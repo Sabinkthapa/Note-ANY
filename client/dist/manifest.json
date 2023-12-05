@@ -31,7 +31,7 @@
       "type": "image/png"
     }
   ],
-  "name": "notes-saved",
+  "name": "just another text editor",
   "short_name": "text Editor",
   "orientation": "portrait",
   "display": "standalone",

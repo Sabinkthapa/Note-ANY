@@ -35,7 +35,7 @@ if ('serviceWorker' in navigator) {
       console.log('service worker registered with scope',registration.scope);
     }) 
     .catch((error)=> {
-      console.error('Service workers are not supported in this browser.');
+      console.error('Service workers are not supported in this browser.',error);
     });
   });
 }

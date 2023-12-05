@@ -3,13 +3,17 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
+const workboxPlugin = require('workbox-webpack-plugin');
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 module.exports = () => {
   return {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -20,14 +24,16 @@ module.exports = () => {
         template: './index.html',
         title: 'notes-saved',
       }),
+      new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc:'./src-sw.js',
-        swDest:'service-worker.js',
+        swDest:'src-sw.js',
       }),
+     
       new WebpackPwaManifest ({
         fingerprints: false,
         inject: true,
-        name: 'notes-saved',
+        name: 'just another text editor',
         short_name:'text Editor',
         description: 'Another text editor',
         background_color: '#e6f0e6',
@@ -51,6 +57,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: "asset/resource",
         },
         {
           test: /\.m?js$/,
