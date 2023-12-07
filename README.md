@@ -40,7 +40,7 @@
 
   ## links
   - [Github repository](https://github.com/Sabinkthapa/Note-ANY.git)
-  - [Heroku deployed app](https://git.heroku.com/noteany.git)
+  - [Heroku deployed app](https://noteany-954482a9a990.herokuapp.com/)
 
   ## Deployment
   1. Create Heroku account and install the Heroku CLI `npm install -g heroku`
