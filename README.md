@@ -36,6 +36,8 @@
   ## Usage
   - Navigate the `` http://localhost:3000/`` , write your notes or snippet ,it automatically saved your content and avaiable offline too.
 
+  ![working-apps](./Image/working-app.png)
+
 
 
   ## links
