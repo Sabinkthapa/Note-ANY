@@ -6,7 +6,7 @@
   ## Description
 
   Note-ANY is a powerful text-editor that enables you to store your notes with offline capabilities and a provide a native like experience across the devices.
-  User can have install in their desktop and access the application with ease.
+  User can install this app in their desktop and access with ease.
  
   
   ## Table of Contents
